@@ -617,6 +617,10 @@ body {
   transition: border-color var(--tra);
 }
 
+.footer-input:not(:focus):not(:placeholder-shown):invalid {
+  border: 1px solid rgba(235, 16, 16, 0.781);
+}
+
 .footer-input:focus {
   border-color: var(--accent-color);
 }
