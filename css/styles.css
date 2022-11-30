@@ -646,18 +646,15 @@ body {
 }
 
 .footer-form .btn-primary {
-  position: relative;
-  width: 200px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
 
-  text-align: right;
-  padding-right: 62px;
+  width: 200px;
 }
 
 .footer-form-icon {
-  position: absolute;
-  right: 28px;
-  top: 50%;
-  transform: translateY(-50%);
   fill: var(--primary-white-color);
 }
 
@@ -828,6 +825,8 @@ body {
 }
 
 .modal-form {
+  position: relative;
+
   /* max-width: 448px; */
 }
 
@@ -870,6 +869,10 @@ body {
   fill: var(--accent-color);
 }
 
+.form-input:not(:focus):not(:placeholder-shown):invalid {
+  border: 1px solid rgba(235, 16, 16, 0.781);
+}
+
 .form-icon {
   position: absolute;
   left: 12px;
@@ -906,6 +909,18 @@ body {
   letter-spacing: 0.01em;
 
   color: rgba(117, 117, 117, 0.5);
+}
+
+.form-checkbox {
+  /* скритий чекбокс преремістив в куток форми */
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  /* скидає повністю зовнішній вигляд у браузері */
+  /* appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none; */
 }
 
 .checkbox-label {
